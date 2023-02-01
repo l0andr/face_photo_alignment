@@ -229,7 +229,7 @@ def maketform(*args):
     # MAKETFORM Create spatial transformation structure (TFORM).
 
     if len(args) <= 0:
-        raise ("[Error]: No input arguments provided for maketform().")
+        raise RuntimeError(" No input arguments provided for maketform().")
 
     transform_type = args[0]
 
@@ -261,7 +261,7 @@ def affine(args):
     # Build an affine TFORM struct.
 
     if len(args) <= 0 or len(args) > 2:
-        raise ("[Error]: Invalid number of arguments provided for affine().")
+        raise RuntimeError("[Error]: Invalid number of arguments provided for affine().")
 
     if len(args) == 2:
         # Construct a 3-by-3 2-D affine transformation matrix A
@@ -322,7 +322,7 @@ def trans_affine(X, t, direction):
     elif direction == 'inverse':
         M = t["tdata"]["Tinv"]
     else:
-        raise ('[Error]:maketform:invalidDirection')
+        raise RuntimeError('[Error]:maketform:invalidDirection')
 
     X1 = np.hstack([X, np.ones((X.shape[0], 1))])  # Convert X to homogeneous coordinates
     U1 = X1 @ M  # Transform in homogeneous coordinates
