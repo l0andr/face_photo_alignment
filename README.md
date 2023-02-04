@@ -1,8 +1,18 @@
 # face_photo_alignment
 <h3>Python Implementation of CP2Tform and its Application for Aligning Face Photos Using Five Points.</h3>
 
+<table align=center width=50><tr>
+<td width=400>Before</td>
+<td width=400>After</td></tr>
+<tr>
+<td><img src="test_data/img_1701.jpg"  ></td>
+<td><img src="results/img_1701_transform.jpg"></td>
+</tr>
+</table>
+
 ### Instalation:
 
+cd face_photo_alignment <br>
 pip install -r requirements.txt --user
 
 ### Run unit-tests:  
