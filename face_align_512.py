@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Face Photo Align test application",
                                      formatter_class=argparse.RawTextHelpFormatter)
-    parser.add_argument("-i", help="Path to image file (can be local or s3:// path )", type=str, required=True)
+    parser.add_argument("-i", help="Path to image file ", type=str, required=True)
     parser.add_argument("-p", help="Path to text files with face points", type=str, required=True)
     parser.add_argument("-o", help="Path to output directory", type=str, required=True)
     parser.add_argument("--show", help="Show images",
