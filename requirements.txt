@@ -1,2 +1,6 @@
 numpy
 pytest
+Pillow
+opencv-python
+matplotlib
+PyQt5
