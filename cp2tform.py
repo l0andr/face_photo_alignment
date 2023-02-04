@@ -91,7 +91,7 @@ def findNonreflectiveSimilarity(uv, xy):
         [sc, -ss, 0],
         [ss, sc, 0],
         [tx, ty, 1]
-    ], dtype=np.float)
+    ], dtype=float)
 
     T = inv(Tinv)
 

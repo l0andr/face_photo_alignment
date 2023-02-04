@@ -9,6 +9,17 @@ import PyQt5
 from typing import List, Optional
 
 def face_align(facial5point:np.ndarray,img:np.ndarray,coord5point:np.ndarray = None,imgSize:Optional[List[int]]=None):
+    """
+
+    :param facial5point: 5x2 np.ndarray wth coordinates of 5 face points
+    :param img: np.ndarray with image for transformation
+    :param coord5point: [optional] coresponded five points on transformed image
+    :param imgSize: [optional] output image size - default 512
+    :return:
+    (trans_img,trans_points)
+    trans_img - image after transformation
+    trans_points - np.ndarray 5x2 with facial5point after transformation
+    """
 
     if imgSize is None:
         imgSize = [512,512]
